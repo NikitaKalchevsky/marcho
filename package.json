@@ -1,0 +1,33 @@
+{
+  "name": "java_script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikita Kalchevskyi",
+  "license": "ISC",
+  "devDependencies": {
+    "avif": "^0.5.1",
+    "aviv": "^0.0.2",
+    "browser-sync": "^2.29.3",
+    "cheerio": "^1.0.0-rc.12",
+    "concat": "^1.0.3",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-uglify-es": "^3.0.0",
+    "gulp-webp": "^5.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "jquery": "^3.7.1",
+    "sass": "^1.69.5"
+  }
+}
