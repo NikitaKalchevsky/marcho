@@ -2,6 +2,8 @@
 @import "reset";
 @import "vars";
 @import "global";
+@import "libs";
+@import "mixin";
 
 .header {
   padding: 40px 0;
@@ -10,7 +12,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 }
 
@@ -34,18 +35,18 @@
     font-size: 16px;
     padding-bottom: 1px;
     transition: border-bottom 0.4s;
-    @extend %quicksand-400;
+    @extend %roboto-400;
 
     &:hover {
       color: $accent;
       border-bottom: 1px solid $accent;
-      @extend %quicksand-500;
+      @extend %roboto-700;
     }
   }
 
   &__list-link--active {
     color: $accent;
-    @extend %quicksand-500;
+    @extend %roboto-700;
   }
 }
 
@@ -185,13 +186,9 @@
   }
 
   &__form-btn {
-    background-color: $accent;
-    color: #fff;
     padding: 12px 26px;
     width: 135px;
-    text-transform: uppercase;
-    box-shadow: 0 7px 20px 0 rgba(255, 17, 48, 0.3);
-    cursor: pointer;
+    @extend %btn;
   }
 
   &__social-link:not(:last-child) {
@@ -213,5 +210,113 @@
   }
 }
 
-@import "libs";
-@import "mixin";
+.top-slider {
+  padding-top: 65px 0 45px;
+  background-color: $bg;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../images/top-slider-bg.png');
+
+
+  &__container {
+    max-width: 1560px;
+  }
+
+  background-color: #f6f6f6;
+
+
+  &__inner {}
+
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+
+  }
+
+  &__content {
+    padding-top: 125px;
+    padding-left: 170px;
+  }
+
+  &__title {
+    max-width: 560px;
+    font-size: 58px;
+    line-height: 68px;
+    color: $title;
+    margin-bottom: 35px;
+    @extend %roboto-700;
+  }
+
+  .top-slider__text {
+    margin-bottom: 60px;
+    max-width: 470px;
+  }
+
+  &__link {
+
+    @extend %btn;
+  }
+
+  &__img {}
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+
+    li {
+      padding: 0 5px;
+
+      button {
+        padding: 0;
+        font-size: 0;
+        background-color: transparent;
+        width: 27px;
+        height: 27px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $default;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+        }
+
+      }
+
+      &.slick-active {
+        border-color: $accent;
+
+        button {
+          border-color: $accent;
+
+          &::before {
+            background-color: $accent;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+.top-slider__text {}
+
+
+
+.top-slider__img {}

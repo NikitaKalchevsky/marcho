@@ -29,6 +29,7 @@
     "gulp-webp": "^5.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "jquery": "^3.7.1",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "slick-carousel": "^1.8.1"
   }
 }

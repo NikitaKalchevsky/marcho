@@ -27,3 +27,13 @@ $bg: #f6f6f6;
   font-family: "Roboto-Medium";
   font-weight: 500;
 }
+
+%btn {
+  background-color: $accent;
+  color: #fff;
+  padding: 17px 35px;
+  text-transform: uppercase;
+  @extend %roboto-400;
+  box-shadow: 0 7px 20px 0 rgba(255, 17, 48, 0.3);
+  cursor: pointer;
+}
