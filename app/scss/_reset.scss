@@ -32,17 +32,14 @@ dd {
   margin: 0;
 }
 
-li {
-  list-style: none;
-}
 
 ul {
   list-style: none;
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 input,
@@ -52,7 +49,10 @@ select {
   font: inherit;
 }
 
-a {
+a,
+input,
+button,
+textarea {
   text-decoration: none;
   color: inherit;
   outline: transparent;
@@ -63,5 +63,5 @@ button {
   border: none;
   padding: 0;
   cursor: pointer;
-  outline: transparent;
+
 }

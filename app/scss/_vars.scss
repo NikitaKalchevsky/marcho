@@ -1,6 +1,7 @@
 $accent: #fe3e57;
 $default: #8d8d8d;
 $title: #29282d;
+$bg: #f6f6f6;
 
 %quicksand-400 {
   font-family: "Quicksand-Regular";
@@ -20,4 +21,9 @@ $title: #29282d;
 %roboto-400 {
   font-family: "Roboto-Regular";
   font-weight: 400;
+}
+
+%roboto-500 {
+  font-family: "Roboto-Medium";
+  font-weight: 500;
 }
