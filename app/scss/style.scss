@@ -646,3 +646,81 @@
     margin-bottom: 15px;
   }
 }
+
+.promo {
+  padding: 150px 0 160px;
+  background-image: url('../images/promo-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  max-width: 1920px;
+  max-height: 700px;
+  margin: 0 auto;
+
+  &__clock {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+  }
+
+  &__clock-item {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    & span {
+      margin-top: 10px;
+      font-size: 48px;
+      margin-bottom: 7px;
+      color: $title;
+      @extend %roboto-700;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: 570px;
+    margin-left: auto;
+  }
+
+  &__subtitle {
+    color: $accent;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $title;
+    @extend %roboto-400;
+    line-height: 26px;
+    display: inline-block;
+    border: 1px solid $accent;
+    padding: 16px 29px;
+    margin-top: 50px;
+  }
+}
+
+.partners {
+  padding-top: 75px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 170px;
+  }
+
+
+}
