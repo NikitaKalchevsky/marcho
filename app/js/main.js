@@ -8,3 +8,10 @@ $(".top-slider__inner").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
 });
+
+$(".star").rateYo({
+  starWidth: "17px",
+  normalFill: "#ccccce",
+  ratedFill: "#ffc35b",
+  readOnly: true,
+});

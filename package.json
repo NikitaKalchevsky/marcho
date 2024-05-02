@@ -9,6 +9,7 @@
   "author": "Nikita Kalchevskyi",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "avif": "^0.5.1",
     "aviv": "^0.0.2",
     "browser-sync": "^2.29.3",
@@ -29,6 +30,7 @@
     "gulp-webp": "^5.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "jquery": "^3.7.1",
+    "rateyo": "^2.3.2",
     "sass": "^1.69.5",
     "slick-carousel": "^1.8.1"
   }
