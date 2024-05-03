@@ -969,3 +969,37 @@
     margin-bottom: 25px;
   }
 }
+
+.page-404 {
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 570px;
+    width: 100%;
+  }
+}
+
+.page-404 {
+  &__title {
+    font-size: 48px;
+    @extend %roboto-700;
+    color: $title;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    max-width: 478px;
+    margin-bottom: 60px;
+  }
+
+  &__btn {
+    @extend %btn;
+
+  }
+}
