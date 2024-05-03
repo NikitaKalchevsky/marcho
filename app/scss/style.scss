@@ -964,4 +964,8 @@
     color: $accent;
     @extend %quicksand-500
   }
+
+  &__text {
+    margin-bottom: 25px;
+  }
 }
