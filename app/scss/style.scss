@@ -830,3 +830,138 @@
   }
 
 }
+
+.top {
+  &__container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 360px;
+    max-width: 1700px;
+
+  }
+
+  &__title {
+    padding-top: 130px;
+    @extend %roboto-400;
+  }
+}
+
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+
+
+
+  &__list-ico {
+    padding-left: 25px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/home.png');
+      height: 16px;
+      width: 16px;
+      left: 0;
+      top: 5px;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    color: #727272;
+    padding-right: 40px;
+    position: relative;
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 9px;
+      height: 15px;
+      right: 15px;
+      top: 9px;
+      background-repeat: no-repeat;
+      background-image: url('../images/icons/arrow-right.png');
+    }
+
+    &:last-child {
+      color: $accent;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+}
+
+
+.modal {
+  padding-top: 100px;
+  max-width: 570px;
+  margin: 0 auto 115px;
+
+  &__links {
+    text-align: center;
+    margin-bottom: 40px;
+
+
+  }
+
+  &__link {
+    font-size: 22px;
+    @extend %roboto-400;
+    color: #909090;
+    text-transform: uppercase;
+    margin: 0 30px;
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+
+  }
+
+  &__input {
+    margin-top: 4px;
+    display: block;
+    width: 100%;
+    background-color: $bg;
+    border: none;
+    height: 60px;
+    padding: 0 15px;
+  }
+
+  &__btn {
+    background-color: #292929;
+    color: #fff;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  &__error {
+    margin-top: 20px;
+    color: $accent;
+    @extend %quicksand-500
+  }
+}
