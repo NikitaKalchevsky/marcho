@@ -45,3 +45,12 @@ $bg: #f6f6f6;
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
+
+%checkbox-hidden {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
+}

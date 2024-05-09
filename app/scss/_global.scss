@@ -54,4 +54,60 @@ a {
   max-width: 570px;
 }
 
-.btn {}
+.pagination {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__prev {
+    margin-right: 40px;
+  }
+
+  &__next {
+    margin-left: 40px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__arrows {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 10px;
+
+    }
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+
+  &__prev {
+    padding-left: 15px;
+
+    &::before {
+      background-image: url('../images/icons/angle_left.png');
+      left: 0;
+      top: 7px;
+    }
+  }
+
+  &__next {
+    padding-right: 15px;
+
+    &::before {
+      background-image: url('../images/icons/angle_right.png');
+      right: 0;
+      top: 7px;
+    }
+  }
+}

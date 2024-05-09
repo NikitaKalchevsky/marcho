@@ -29,7 +29,11 @@
     "gulp-uglify-es": "^3.0.0",
     "gulp-webp": "^5.0.0",
     "imagemin-mozjpeg": "^10.0.0",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.7.1",
+    "jquery-form-styler": "^2.0.2",
+    "nouislider": "^15.7.1",
+    "rangeslider.js": "^2.3.3",
     "rateyo": "^2.3.2",
     "sass": "^1.69.5",
     "slick-carousel": "^1.8.1"
