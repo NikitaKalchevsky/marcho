@@ -1,3 +1,30 @@
+//MENU RWVIEWS AND DESCRIPTION
+
+$(".product-tabs__top-item").on("click", function (e) {
+  e.preventDefault();
+  $(".product-tabs__top-item").removeClass("product-tabs__top-item--active");
+  $(this).addClass("product-tabs__top-item--active");
+
+  $(".product-tabs__content-item").removeClass(
+    "product-tabs__content-item--active"
+  );
+  $($(this).attr("href")).addClass("product-tabs__content-item--active");
+});
+//SLICK SLIDER TWO
+$(".product-slide__thumb").slick({
+  asNavFor: ".product-slide__big",
+  focusOnSelect: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  vertical: true,
+  draggable: false,
+});
+$(".product-slide__big").slick({
+  asNavFor: ".product-slide__thumb",
+  draggable: false,
+  fade: true,
+});
+// ON OF SCREEN MAX AND MIN SEE
 $(".shop-content__filter-btn").on("click", function () {
   $(".shop-content__filter-btn").removeClass(
     "shop-content__filter-btn--active"
@@ -12,8 +39,8 @@ $(".button-list").on("click", function () {
 $(".button-grid").on("click", function () {
   $(".product-item").removeClass("product-item--list");
 });
-
-$(".select-style").styler();
+//RANGE SLIDER
+$(".select-style, .product-one__num").styler();
 $(".filter-price__input").ionRangeSlider({
   type: "double",
   prefix: "$",
@@ -36,14 +63,14 @@ $(".top-slider__inner").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
 });
-
+// REITING
 $(".star").rateYo({
   starWidth: "17px",
   normalFill: "#ccccce",
   ratedFill: "#ffc35b",
   readOnly: true,
 });
-
+//  TIME OUT SLIDE
 function getTimeRemaining(endtime) {
   const total = Date.parse(endtime) - Date.parse(new Date());
   const seconds = Math.floor((total / 1000) % 60);

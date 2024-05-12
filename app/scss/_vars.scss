@@ -36,6 +36,12 @@ $bg: #f6f6f6;
   @extend %roboto-400;
   box-shadow: 0 7px 20px 0 rgba(255, 17, 48, 0.3);
   cursor: pointer;
+  transition: color, background-color 0.4s;
+
+  &:hover {
+    color: #fff;
+    background-color: $title;
+  }
 }
 
 @function max($numbers...) {
