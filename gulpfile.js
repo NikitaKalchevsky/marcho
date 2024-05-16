@@ -4,9 +4,11 @@ const scss = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
+const nunjucksRender = require("gulp-nunjucks-render");
 const del = require("del");
 const fileInclude = require("gulp-file-include");
 const fonter = require("gulp-fonter");
+const rename = require("gulp-rename");
 const ttf2woff2 = require("gulp-ttf2woff2");
 const browserSync = require("browser-sync").create();
 const svgSprite = require("gulp-svg-sprite");
@@ -23,6 +25,13 @@ const htmlInclude = () => {
     .pipe(dest("app")) // указываем, в какую папку поместить готовый файл html
     .pipe(browserSync.stream());
 };
+
+function nunjucks() {
+  return src("app/*.njk")
+    .pipe(nunjucksRender())
+    .pipe(dest("app"))
+    .pipe(browserSync.stream());
+}
 
 function fonts() {
   return src("app/fonts/src/*.*")
@@ -68,10 +77,16 @@ function svgSprites() {
 }
 
 function styles() {
-  return src("app/scss/style.scss")
-    .pipe(autoprefixer({ overrideBrowserslist: ["last 10 version"] }))
-    .pipe(concat("style.min.css"))
+  return src("app/scss/*.scss")
     .pipe(scss({ outputStyle: "compressed" }))
+    .pipe(
+      rename({
+        suffix: ".min",
+      })
+    )
+    .pipe(
+      autoprefixer({ overrideBrowserslist: ["last 10 version"], grid: true })
+    )
     .pipe(dest("app/css"))
     .pipe(browserSync.stream());
 }
@@ -118,7 +133,8 @@ function watching() {
     },
     notify: false,
   });
-  watch(["app/scss/**/*.scss"], styles);
+  watch(["app/**/*.scss"], styles);
+  watch(["app/*.njk"], nunjucks);
   watch(["app/html/**/*.html"], htmlInclude);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/**/*.html"]).on("change", browserSync.reload);
@@ -131,7 +147,15 @@ exports.scripts = scripts;
 exports.watching = watching;
 exports.svgSprites = svgSprites;
 exports.images = images;
+exports.nunjucks = nunjucks;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(svgSprites, htmlInclude, watching);
+exports.default = parallel(
+  styles,
+  svgSprites,
+  htmlInclude,
+  scripts,
+  nunjucks,
+  watching
+);

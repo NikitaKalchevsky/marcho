@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/contacts.min.css">
+
+  <title>Contacts</title>
+</head>
+
+<body>
+  {% include 'app/module/parts/_header/_header.html' %}
+
+  <main class="main">
+    {% include 'app/module/_contacts/_contacts.html' %}
+   
+  </main>
+
+   {% include 'app/module/parts/_footer/_footer.html' %}
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" defer></script>
+  <script>
+    let map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 27.048374598858096, lng: -82.27087177202789 },
+        zoom: 13,
+      })
+    }
+  </script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

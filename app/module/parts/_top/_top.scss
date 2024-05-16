@@ -1,0 +1,15 @@
+.top {
+  &__container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 360px;
+    max-width: 1700px;
+
+  }
+
+  &__title {
+    padding-top: 130px;
+    @extend %roboto-400;
+  }
+}

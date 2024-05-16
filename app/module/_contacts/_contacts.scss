@@ -1,0 +1,134 @@
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+.map {
+  padding: 120px 0;
+}
+
+.contact {
+  padding-bottom: 120px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__info {
+    max-width: 370px;
+    width: 100%;
+    margin-right: 30px;
+  }
+
+  &__info-title {
+    font-size: 48px;
+    line-height: 58px;
+    color: $title;
+    @extend %roboto-700;
+    margin-bottom: 20px;
+  }
+
+  &__info-text {
+    margin-bottom: 55px;
+  }
+
+
+  &__info-item {
+    margin-top: 55px;
+    color: $title;
+    padding-left: 80px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      top: -5px;
+      box-shadow: 0 7px 20px 0 rgba(192, 192, 192, 0.3);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/icons/phone-icon.png');
+      left: 20px;
+      top: 15px;
+    }
+
+  }
+
+  &__info-item--location::after {
+    background-image: url('../images/icons/location-icon.png');
+    background-repeat: no-repeat;
+    width: 14px;
+    left: 23px;
+  }
+
+  &__info-item--email::after {
+    background-image: url('../images/icons/email-icon.png');
+    background-repeat: no-repeat;
+    width: 18px;
+    left: 21px;
+
+  }
+
+  &__info-phone {
+    display: block;
+    color: $title;
+  }
+
+  &__form {
+    max-width: 772px;
+    width: 100%;
+    box-shadow: 0 7px 20px 0 rgba(192, 192, 192, 0.3);
+    padding: 50px 40px 55px 40px;
+
+  }
+
+  &__form-input {
+    width: 100%;
+    display: block;
+  }
+
+  &__form-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: $title;
+  }
+
+  &__form-box {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 330px;
+    }
+  }
+
+  &__form-input {
+    background-color: #ececec;
+    border: none;
+    height: 60px;
+    padding: 0 24px;
+    margin-bottom: 30px;
+  }
+
+  &__form-textarea {
+    padding: 24px;
+    width: 100%;
+    resize: none;
+    height: 200px;
+    display: block;
+    border: none;
+    background-color: #ececec;
+    margin-bottom: 30px;
+  }
+
+  &__form-btn {
+    @extend %btn;
+  }
+}

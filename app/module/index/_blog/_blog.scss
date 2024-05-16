@@ -1,0 +1,139 @@
+.blog {
+  background-image: url('../images/blog-bg.png');
+  @include image-bg;
+  background-size: auto;
+
+
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 160px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url('../images/decor/blog-decor.png');
+      background-repeat: no-repeat;
+      right: -20px;
+      top: -25px;
+      width: 126px;
+      height: 53px;
+      z-index: -1;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 370px;
+    border: 1px solid #eaeaea;
+    transition: all 0.4s;
+
+    &:hover {
+      box-shadow: 0 7px 20px 0 rgba(192, 192, 192, 0.3);
+      border: none;
+
+      .blog__item-link {
+        color: $accent;
+      }
+
+      .blog__item-link::after {
+        background-image: url('../images/icons/arrow-red.png');
+      }
+    }
+  }
+
+  &__item-wrap {
+    padding: 30px;
+    background-color: #fff;
+  }
+
+  &__item-info {
+    display: flex;
+  }
+
+  &__item-data,
+  &__item-author {
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__item-author {
+    margin-right: 30px;
+  }
+
+  &__item-data::before {
+    background-image: url('../images/icons/time.png');
+  }
+
+  &__item-author::before {
+    background-image: url('../images/icons/user-gray.png');
+  }
+
+  &__item-title {
+    color: $title;
+    font-size: 22px;
+    margin: 15px 0;
+  }
+
+  &__item-link {
+    position: relative;
+    padding-right: 15px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 10px;
+      top: 6px;
+      right: 0;
+      background-image: url('../images/icons/arrow-gray.png');
+    }
+  }
+
+}
+
+.blog-box {
+  display: flex;
+
+  margin-bottom: 20px;
+
+  &__author,
+  &__data {
+    padding-left: 30px;
+    position: relative;
+    margin-right: 40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 4px;
+    }
+  }
+
+  &__data::before {
+    background-image: url('../images/icons/time.png');
+  }
+
+  &__author::before {
+    background-image: url('../images/icons/user-gray.png');
+  }
+
+  &__item {
+    margin-bottom: 60px;
+
+  }
+}
